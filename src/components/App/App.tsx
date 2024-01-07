@@ -1,13 +1,14 @@
 import '../../index.css';
 
-import React from 'react';
-
+import Header from '../Header/Header';
+import TodoList from '../TodoList/TodoList';
 import style from './styles/styles.module.css';
 
 function App() {
   return (
     <div className={style.app}>
-      <h1>TODO</h1>
+      <Header />
+      <TodoList />
     </div>
   );
 }

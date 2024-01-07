@@ -1,0 +1,62 @@
+.header {
+  width: 100%;
+  background-image: url(../../../images/bg-desktop-dark.jpg);
+  background-size: cover;
+}
+
+.container {
+  margin: 78px auto 192px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 540px;
+  width: 100%;
+  align-items: center;
+  height: 30px;
+}
+
+.title {
+  margin: 0;
+  font-family: JosefinSans;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 15px;
+  line-height: normal;
+  align-self: baseline;
+}
+
+.colorThemeButton {
+  margin: 0;
+  padding: 0;
+  background-image: url(../../../images/icon-sun.svg);
+  background-size: 26px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    background-image: url(../../../images/bg-mobile-dark.jpg);
+  }
+
+  .container {
+    margin: 47px auto 132px;
+    max-width: calc(100% - 48px);
+    height: 20px;
+  }
+
+  .title {
+    font-size: 27px;
+    letter-spacing: 10px;
+  }
+
+  .colorThemeButton {
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
