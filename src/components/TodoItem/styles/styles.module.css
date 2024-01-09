@@ -1,0 +1,96 @@
+.container {
+  display: flex;
+  position: relative;
+  padding: 19.5px 24px;
+  max-width: 492px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  background-color: hsl(235, 24%, 19%);
+}
+
+.label {
+  display: flex;
+  font-family: JosefinSans;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 17px;
+  font-weight: 400;
+  align-items: center;
+  word-spacing: -1px;
+  max-width: calc(100% - 40px);
+  overflow: hidden;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.checkboxLabel::before {
+  content: '';
+  margin: 0 22px 0 0;
+  min-width: 23px;
+  min-height: 23px;
+  border-radius: 50%;
+  border: 1px solid hsl(237, 14%, 26%);
+}
+
+.checkboxLabel:hover::before {
+  border-image: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) 1;
+}
+
+.checkboxLabelCompleted::before {
+  background:
+    url(../../../images/icon-check.svg) no-repeat,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-position: center;
+}
+
+.deleteButton {
+  position: absolute;
+  top: calc(100% / 2 - 9px);
+  right: 24px;
+  background-image: url(../../../images/icon-cross.svg);
+  background-size: contain;
+  border: none;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 0 auto;
+    padding: 16px 20px;
+    max-width: calc(100% - 40px);
+  }
+
+  .label {
+    font-size: 12px;
+    line-height: 10px;
+    max-width: calc(100% - 24px);
+  }
+
+  .checkbox {
+    width: 19px;
+    height: 19px;
+  }
+
+  .checkboxLabel::before {
+    margin: 0 12px 0 0;
+    min-width: 18px;
+    min-height: 18px;
+  }
+
+  .deleteButton {
+    top: calc(100% / 2 - 7px);
+    right: 19px;
+    width: 14px;
+    height: 14px;
+  }
+}
