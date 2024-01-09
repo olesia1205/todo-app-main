@@ -2,7 +2,8 @@
   position: absolute;
   top: 158px;
   display: flex;
-  width: 494px;
+  max-width: 494px;
+  width: 100%;
   padding: 20px 24px;
   border-radius: 5px;
   background-color: hsl(235, 24%, 19%);
@@ -39,4 +40,24 @@
   color: hsl(234, 39%, 85%);
   outline: none;
   box-shadow: inset 0px -45px 0px 20px hsl(235, 24%, 19%);
+}
+
+@media screen and (max-width: 600px) {
+  .formWrapper {
+    top: 107px;
+    padding: 15px 20px;
+    max-width: calc(100% - 90px);
+  }
+
+  .submitButton {
+    min-width: 18px;
+    min-height: 18px;
+    margin-right: 12px;
+  }
+
+  .input {
+    width: 100%;
+    font-size: 12px;
+    line-height: 10px;
+  }
 }

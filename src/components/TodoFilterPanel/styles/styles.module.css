@@ -52,10 +52,16 @@
 }
 
 @media screen and (max-width: 600px) {
+  .filterPanel {
+    max-width: 100%;
+  }
+
   .filterPanelWrapper {
     margin: 0 auto;
     padding: 19px 20px 21px;
     max-width: calc(100% - 40px);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   .filterButtonWrapper {
@@ -71,5 +77,10 @@
   .text {
     font-size: 12px;
     line-height: 10px;
+  }
+
+  .textBold {
+    font-size: 14px;
+    line-height: normal;
   }
 }

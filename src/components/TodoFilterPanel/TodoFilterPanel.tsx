@@ -22,10 +22,10 @@ function TodoFilterPanel() {
     <div className={style.filterPanel}>
       <div className={style.filterPanelWrapper}>
         <p className={style.text}>5 items left</p>
-        {width >= 600 && <Filters />}
+        {width > 600 && <Filters />}
         <button className={`${style.text} ${style.button}`}>Clear Completed</button>
       </div>
-      {width < 600 && <Filters />}
+      {width <= 600 && <Filters />}
     </div>
   );
 }
