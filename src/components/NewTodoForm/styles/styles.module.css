@@ -1,0 +1,42 @@
+.formWrapper {
+  position: absolute;
+  top: 158px;
+  display: flex;
+  width: 494px;
+  padding: 20px 24px;
+  border-radius: 5px;
+  background-color: hsl(235, 24%, 19%);
+}
+
+.submitButton {
+  padding: 0;
+  cursor: pointer;
+  min-width: 24px;
+  min-height: 24px;
+  margin-right: 26px;
+  border-radius: 50%;
+  border: 1px solid hsl(237, 14%, 26%);
+  background-color: transparent;
+}
+
+.submitButton:hover {
+  background-image: url(../../../images/icon-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input {
+  padding: 0;
+  border: none;
+  width: 100%;
+  font-family: JosefinSans;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 17px;
+  font-weight: 400;
+  word-spacing: -1px;
+  background-color: transparent;
+  color: hsl(234, 39%, 85%);
+  outline: none;
+  box-shadow: inset 0px -45px 0px 20px hsl(235, 24%, 19%);
+}
