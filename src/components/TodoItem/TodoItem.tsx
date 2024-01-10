@@ -3,11 +3,12 @@ import { useState } from 'react';
 import styles from './styles/styles.module.css';
 
 type TTodoItem = {
+  id: number;
   title: string;
   completed: boolean;
 };
 
-function TodoItem({ title, completed }: TTodoItem) {
+function TodoItem({ id, title, completed }: TTodoItem) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -29,12 +30,12 @@ function TodoItem({ title, completed }: TTodoItem) {
             ? `${styles.checkboxLabel} ${styles.checkboxLabelCompleted}`
             : styles.checkboxLabel
         }`}
-        htmlFor="checkbox"
+        htmlFor={`checkbox${id}`}
       >
         <input
           type="checkbox"
           className={styles.checkbox}
-          id="checkbox"
+          id={`checkbox${id}`}
           checked={completed}
           onChange={() => {}}
         />

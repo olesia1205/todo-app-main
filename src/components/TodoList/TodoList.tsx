@@ -1,15 +1,28 @@
 /* eslint-disable react/no-array-index-key */
-import todos from '../../utils/constants';
+// import todos from '../../utils/constants';
+import { useSelector } from 'react-redux';
+
+import { allTodos } from '../../store/selectors/todos-selectors';
 import TodoFilterPanel from '../TodoFilterPanel/TodoFilterPanel';
 import TodoItem from '../TodoItem/TodoItem';
 import styles from './styles/styles.module.css';
 
 function TodoList() {
+  const todos = useSelector(allTodos);
+
+  // Reverse the todos array
+  const reversedTodos = [...todos].reverse();
+
   return (
     <>
       <ul className={styles.todoList}>
-        {todos.map((todo: { title: string; completed: boolean }, index: number) => (
-          <TodoItem key={index} title={todo.title} completed={todo.completed} />
+        {reversedTodos.map((todo: { id: number; title: string; completed: boolean }) => (
+          <TodoItem
+            key={todo.id}
+            id={todo.id}
+            title={todo.title}
+            completed={todo.completed}
+          />
         ))}
         <TodoFilterPanel />
       </ul>
