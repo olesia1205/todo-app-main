@@ -1,5 +1,11 @@
 /* eslint-disable @typescript-eslint/default-param-last */
-import { ADD_TODO, EDIT_TODO, REMOVE_TODO, TOGGLE_TODO } from '../constants/todos-const';
+import {
+  ADD_TODO,
+  CLEAR_COMPLETED_TODOS,
+  EDIT_TODO,
+  REMOVE_TODO,
+  TOGGLE_TODO,
+} from '../constants/todos-const';
 
 export default function todosReducer(state = [], action) {
   switch (action.type) {
@@ -31,6 +37,9 @@ export default function todosReducer(state = [], action) {
         }
         return todo;
       });
+    }
+    case CLEAR_COMPLETED_TODOS: {
+      return state.filter((todo) => !todo.completed);
     }
     default: {
       return state;

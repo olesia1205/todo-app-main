@@ -1,7 +1,10 @@
-// export const selectAllTodos = (state) => state.todos;
+import { createSelector } from 'reselect';
 
-export const selectActiveTodos = (state) =>
-  state.todos.filter((todo) => todo.completed === false);
+const selectAllTodos = (state) => state.todos;
+
+export const selectActiveTodos = createSelector(selectAllTodos, (todos) =>
+  todos.filter((todo) => todo.completed === false)
+);
 
 export const selectVisibleTodos = (state, filter) => {
   switch (filter) {

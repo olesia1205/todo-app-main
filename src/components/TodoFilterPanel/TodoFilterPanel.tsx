@@ -1,7 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import setFilter from '../../store/actions/filters-action';
+import { clearCompletedTodos } from '../../store/actions/todos-actions';
 import { selectActiveFilter } from '../../store/selectors/filters-selectors';
+import { selectActiveTodos } from '../../store/selectors/todos-selectors';
 import useWindowWidth from '../../utils/windowWidth';
 import style from './styles/styles.module.css';
 
@@ -47,13 +49,24 @@ const Filters = () => {
 
 function TodoFilterPanel() {
   const { width } = useWindowWidth();
+  const dispatch = useDispatch();
+  const activeTodos = useSelector(selectActiveTodos);
+
+  const handleClearCompleted = () => {
+    dispatch(clearCompletedTodos());
+  };
 
   return (
     <div className={style.filterPanel}>
       <div className={style.filterPanelWrapper}>
-        <p className={style.text}>5 items left</p>
+        <p className={style.text}>{activeTodos.length} items left</p>
         {width > 600 && <Filters />}
-        <button className={`${style.text} ${style.button}`}>Clear Completed</button>
+        <button
+          className={`${style.text} ${style.button}`}
+          onClick={handleClearCompleted}
+        >
+          Clear Completed
+        </button>
       </div>
       {width <= 600 && <Filters />}
     </div>
