@@ -11,15 +11,31 @@
 
 .label {
   display: flex;
+  align-items: center;
+  max-width: calc(100% - 40px);
+  width: 100%;
+}
+
+.todoTitle {
   font-family: JosefinSans;
   font-size: 18px;
   font-style: normal;
   line-height: 17px;
   font-weight: 400;
-  align-items: center;
   word-spacing: -1px;
   max-width: calc(100% - 40px);
+  width: 100%;
   overflow: hidden;
+  resize: none;
+  box-shadow: inset 0px -45px 0px 1000px hsl(235, 24%, 19%);
+  border: none;
+  outline: none;
+  color: hsl(234, 39%, 85%);
+  padding: 0;
+}
+
+.labelСrossedOut {
+  text-decoration: line-through;
 }
 
 .checkbox {
@@ -70,9 +86,9 @@
     max-width: calc(100% - 40px);
   }
 
-  .label {
+  .todoTitle {
     font-size: 12px;
-    line-height: 10px;
+    word-spacing: -1px;
     max-width: calc(100% - 24px);
   }
 
