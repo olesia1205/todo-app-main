@@ -2,7 +2,6 @@
 import { ADD_TODO, EDIT_TODO, REMOVE_TODO, TOGGLE_TODO } from '../constants/todos-const';
 
 export default function todosReducer(state = [], action) {
-  console.log(action.payload);
   switch (action.type) {
     case ADD_TODO: {
       return [

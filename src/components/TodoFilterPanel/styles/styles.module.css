@@ -47,7 +47,7 @@
   color: hsl(234, 39%, 85%);
 }
 
-.button:active {
+.buttonActive {
   color: hsl(220, 98%, 61%);
 }
 

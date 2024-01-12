@@ -1,14 +1,44 @@
+import { useDispatch, useSelector } from 'react-redux';
+
+import setFilter from '../../store/actions/filters-action';
+import { selectActiveFilter } from '../../store/selectors/filters-selectors';
 import useWindowWidth from '../../utils/windowWidth';
 import style from './styles/styles.module.css';
 
 const Filters = () => {
+  const dispatch = useDispatch();
+  const activeFilter = useSelector(selectActiveFilter);
+
   return (
     <div className={style.filterButtonWrapper}>
-      <button className={`${style.button} ${style.text} ${style.textBold}`}>All</button>
-      <button className={`${style.button} ${style.text} ${style.textBold}`}>
+      <button
+        className={
+          activeFilter === 'all'
+            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
+            : `${style.button} ${style.text} ${style.textBold}`
+        }
+        onClick={() => dispatch(setFilter('all'))}
+      >
+        All
+      </button>
+      <button
+        className={
+          activeFilter === 'active'
+            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
+            : `${style.button} ${style.text} ${style.textBold}`
+        }
+        onClick={() => dispatch(setFilter('active'))}
+      >
         Active
       </button>
-      <button className={`${style.button} ${style.text} ${style.textBold}`}>
+      <button
+        className={
+          activeFilter === 'completed'
+            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
+            : `${style.button} ${style.text} ${style.textBold}`
+        }
+        onClick={() => dispatch(setFilter('completed'))}
+      >
         Completed
       </button>
     </div>
