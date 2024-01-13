@@ -25,6 +25,7 @@ function NewTodoForm() {
         type="text"
         name="newTodo"
         placeholder="Create a new todo..."
+        autoComplete="off"
       />
     </form>
   );
