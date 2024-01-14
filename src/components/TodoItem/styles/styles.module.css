@@ -79,6 +79,20 @@
   cursor: pointer;
 }
 
+.createdDate {
+  position: absolute;
+  font-family: JosefinSans;
+  font-size: 12px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  margin: 0;
+  right: 2%;
+  top: 80%;
+  color: hsl(234, 11%, 52%);
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 600px) {
   .container {
     margin: 0 auto;
@@ -108,5 +122,9 @@
     right: 19px;
     width: 14px;
     height: 14px;
+  }
+
+  .createdDate {
+    font-size: 9px;
   }
 }

@@ -3,6 +3,7 @@ import {
   CLEAR_COMPLETED_TODOS,
   EDIT_TODO,
   REMOVE_TODO,
+  SORT_BY_DATE_TODOS,
   TOGGLE_TODO,
 } from '../constants/todos-const';
 
@@ -24,4 +25,7 @@ export const editTodo = (newTitle) => ({
 });
 export const clearCompletedTodos = () => ({
   type: CLEAR_COMPLETED_TODOS,
+});
+export const sortByDateTodos = () => ({
+  type: SORT_BY_DATE_TODOS,
 });

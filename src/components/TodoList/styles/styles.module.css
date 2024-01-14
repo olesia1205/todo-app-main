@@ -21,6 +21,17 @@
   word-spacing: -1px;
 }
 
+.filterByDateButton {
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.filterByDateButton:hover {
+  color: hsl(234, 39%, 85%);
+}
+
 @media screen and (max-width: 600px) {
   .todoList {
     max-width: calc(100% - 48px);
