@@ -22,3 +22,16 @@ export const selectVisibleTodos = (state, filter) => {
     }
   }
 };
+
+export const selectSortedTodos = createSelector(selectAllTodos, (todos) => {
+  const sortedTodos = [...todos].sort((a, b) => {
+    if (a.id > b.id) {
+      return b.id - a.id;
+    }
+    if (a.id < b.id) {
+      return a.id - b.id;
+    }
+    return 0;
+  });
+  return sortedTodos;
+});

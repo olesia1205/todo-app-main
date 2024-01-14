@@ -4,6 +4,7 @@ import {
   CLEAR_COMPLETED_TODOS,
   EDIT_TODO,
   REMOVE_TODO,
+  SORT_BY_DATE_TODOS,
   TOGGLE_TODO,
 } from '../constants/todos-const';
 
@@ -16,6 +17,11 @@ export default function todosReducer(state = [], action) {
           id: Date.now(),
           title: action.title,
           completed: false,
+          created: `${new Date().toLocaleDateString()} ${new Date()
+            .toLocaleTimeString()
+            .split(':')
+            .slice(0, 2)
+            .join(':')}`,
         },
       ];
     }
@@ -40,6 +46,18 @@ export default function todosReducer(state = [], action) {
     }
     case CLEAR_COMPLETED_TODOS: {
       return state.filter((todo) => !todo.completed);
+    }
+    case SORT_BY_DATE_TODOS: {
+      const sortedTodos = [...state].sort((a, b) => {
+        if (a.id > b.id) {
+          return b.id - a.id;
+        }
+        if (a.id < b.id) {
+          return a.id - b.id;
+        }
+        return 0;
+      });
+      return sortedTodos;
     }
     default: {
       return state;
