@@ -124,6 +124,12 @@
     min-height: 18px;
   }
 
+  .checkboxLabel:hover::before {
+    margin: 0 12px 0 0;
+    min-width: 18px;
+    min-height: 18px;
+  }
+
   .deleteButton {
     top: calc(100% / 2 - 7px);
     right: 19px;
