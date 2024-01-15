@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/todo-app-main/static/css/main.5a944c80.css",
+    "main.js": "/todo-app-main/static/js/main.835ddd26.js",
+    "static/media/JosefinSans-Regular.ttf": "/todo-app-main/static/media/JosefinSans-Regular.c978665c44b59cf9c71f.ttf",
+    "static/media/JosefinSans-Bold.ttf": "/todo-app-main/static/media/JosefinSans-Bold.0ec6d05a9917d9c58519.ttf",
+    "static/media/bg-desktop-dark.jpg": "/todo-app-main/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "static/media/redux.cjs": "/todo-app-main/static/media/redux.7edfc461ab353f1712ab.cjs",
+    "static/media/icon-sun.svg": "/todo-app-main/static/media/icon-sun.910b1f9a23741afc341e.svg",
+    "index.html": "/todo-app-main/index.html",
+    "static/media/icon-cross.svg": "/todo-app-main/static/media/icon-cross.6ee81d30b75cab19d6f7.svg",
+    "static/media/icon-check.svg": "/todo-app-main/static/media/icon-check.a8fb15d0278c8e312df5.svg",
+    "main.5a944c80.css.map": "/todo-app-main/static/css/main.5a944c80.css.map",
+    "main.835ddd26.js.map": "/todo-app-main/static/js/main.835ddd26.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5a944c80.css",
+    "static/js/main.835ddd26.js"
+  ]
+}
