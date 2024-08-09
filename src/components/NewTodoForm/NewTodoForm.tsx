@@ -1,10 +1,9 @@
-import { useDispatch } from 'react-redux';
-
-import { addTodo } from '../../store/actions/todos-actions';
+import { useAppDispatch } from '../../store/store';
+import { addTodo } from '../../store/todosSlice';
 import styles from './styles/styles.module.css';
 
 function NewTodoForm() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handeleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
