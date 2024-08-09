@@ -2,17 +2,11 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { editTodo, removeTodo, toggleTodo } from '../../store/actions/todos-actions';
+import { editTodo, removeTodo, toggleTodo } from '../../store/todosSlice';
+import { ITodo } from '../../utils/types';
 import styles from './styles/styles.module.css';
 
-type TTodoItem = {
-  id: number;
-  title: string;
-  completed: boolean;
-  created: string;
-};
-
-function TodoItem({ id, title, completed, created }: TTodoItem) {
+function TodoItem({ id, title, completed }: ITodo) {
   const [isHovered, setIsHovered] = useState(false);
   const [editedTitle, setEditedTitle] = useState(title);
   const dispatch = useDispatch();
@@ -57,7 +51,6 @@ function TodoItem({ id, title, completed, created }: TTodoItem) {
           rows={Math.ceil(editedTitle.length / 50) + editedTitle.split('\n').length - 1} // to set the height of the <textarea> automatically based on the content and number of line breaks
         />
       </label>
-      <p className={styles.createdDate}>{created}</p>
       {isHovered ? (
         <button
           className={styles.deleteButton}
