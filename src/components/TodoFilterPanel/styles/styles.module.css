@@ -12,14 +12,6 @@
   padding: 18px 24px 16px;
 }
 
-.filterButtonWrapper {
-  display: flex;
-  justify-content: space-between;
-  max-width: 165px;
-  width: 100%;
-  margin-left: 40px;
-}
-
 .text {
   margin: 0;
   font-family: JosefinSans;
@@ -28,11 +20,6 @@
   line-height: 17px;
   font-weight: 400;
   color: hsl(234, 11%, 52%);
-}
-
-.textBold {
-  line-height: normal;
-  font-weight: 700;
 }
 
 .button {
@@ -77,10 +64,5 @@
   .text {
     font-size: 12px;
     line-height: 10px;
-  }
-
-  .textBold {
-    font-size: 14px;
-    line-height: normal;
   }
 }

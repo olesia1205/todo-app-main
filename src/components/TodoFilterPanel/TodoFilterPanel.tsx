@@ -1,56 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
-
-import setFilter from '../../store/actions/filters-action';
-import { clearCompletedTodos } from '../../store/actions/todos-actions';
-import { selectActiveFilter } from '../../store/selectors/filters-selectors';
-import { selectActiveTodos } from '../../store/selectors/todos-selectors';
+import { useAppDispatch, useAppSelector } from '../../store/store';
+import { clearCompletedTodos } from '../../store/todosSlice';
 import useWindowWidth from '../../utils/windowWidth';
+import Filters from '../Filters/Filters';
 import style from './styles/styles.module.css';
-
-const Filters = () => {
-  const dispatch = useDispatch();
-  const activeFilter = useSelector(selectActiveFilter);
-
-  return (
-    <div className={style.filterButtonWrapper}>
-      <button
-        className={
-          activeFilter === 'all'
-            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
-            : `${style.button} ${style.text} ${style.textBold}`
-        }
-        onClick={() => dispatch(setFilter('all'))}
-      >
-        All
-      </button>
-      <button
-        className={
-          activeFilter === 'active'
-            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
-            : `${style.button} ${style.text} ${style.textBold}`
-        }
-        onClick={() => dispatch(setFilter('active'))}
-      >
-        Active
-      </button>
-      <button
-        className={
-          activeFilter === 'completed'
-            ? `${style.button} ${style.buttonActive} ${style.text} ${style.textBold}`
-            : `${style.button} ${style.text} ${style.textBold}`
-        }
-        onClick={() => dispatch(setFilter('completed'))}
-      >
-        Completed
-      </button>
-    </div>
-  );
-};
 
 function TodoFilterPanel() {
   const { width } = useWindowWidth();
-  const dispatch = useDispatch();
-  const activeTodos = useSelector(selectActiveTodos);
+  const dispatch = useAppDispatch();
+  const todos = useAppSelector((state) => state.todos.todos);
+  const activeTodos = todos.filter((todo) => !todo.completed);
 
   const handleClearCompleted = () => {
     dispatch(clearCompletedTodos());
