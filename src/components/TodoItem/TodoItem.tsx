@@ -45,7 +45,11 @@ function TodoItem({ id, title, completed }: ITodo) {
           onChange={() => dispatch(toggleTodo(id))}
         />
         <textarea
-          className={styles.todoTitle}
+          className={
+            completed
+              ? `${styles.todoTitle} ${styles.todoTitleCompleted}`
+              : styles.todoTitle
+          }
           value={editedTitle}
           onChange={handleTitleChange}
           rows={Math.ceil(editedTitle.length / 50) + editedTitle.split('\n').length - 1} // to set the height of the <textarea> automatically based on the content and number of line breaks

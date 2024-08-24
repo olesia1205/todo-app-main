@@ -7,54 +7,49 @@
 }
 
 .text {
-  margin: 0;
-  font-family: JosefinSans;
-  font-size: 14px;
-  font-style: normal;
+  font-size: var(--fs-small);
   line-height: 17px;
-  font-weight: 400;
-  color: hsl(234, 11%, 52%);
+  color: var(--blue-400);
 }
 
 .textBold {
   line-height: normal;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
 
 .button {
   padding: 0;
   border: none;
   background-color: transparent;
-  color: hsl(234, 11%, 52%);
+  color: var(--blue-400);
   cursor: pointer;
 }
 
 .button:hover {
-  color: hsl(234, 39%, 85%);
+  color: var(--blue-300);
 }
 
 .buttonActive {
-  color: hsl(220, 98%, 61%);
+  color: var(--primary);
 }
 
 @media screen and (max-width: 600px) {
   .filterButtonWrapper {
     margin: 15px 0 0;
-    padding: 19px 80px 15px;
+    padding: 19px 80px;
     display: flex;
-    max-width: calc(100% - 160px);
+    max-width: 100%;
     border-radius: 5px;
     justify-content: space-between;
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--blue-200);
   }
 
   .text {
-    font-size: 12px;
+    font-size: var(--fs-small-mob);
     line-height: 10px;
   }
 
   .textBold {
-    font-size: 14px;
-    line-height: normal;
+    font-size: var(--fs-small);
   }
 }

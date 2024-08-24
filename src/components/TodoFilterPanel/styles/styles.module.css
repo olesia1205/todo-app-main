@@ -6,36 +6,33 @@
 .filterPanelWrapper {
   display: flex;
   justify-content: space-between;
-  max-width: 492px;
   width: 100%;
-  background-color: hsl(235, 24%, 19%);
+  background-color: var(--blue-200);
   padding: 18px 24px 16px;
 }
 
 .text {
   margin: 0;
-  font-family: JosefinSans;
-  font-size: 14px;
-  font-style: normal;
+  font-size: var(--fs-small);
   line-height: 17px;
-  font-weight: 400;
-  color: hsl(234, 11%, 52%);
+  font-weight: var(--fw-normal);
+  color: var(--blue-400);
 }
 
 .button {
   padding: 0;
   border: none;
   background-color: transparent;
-  color: hsl(234, 11%, 52%);
+  color: var(--blue-400);
   cursor: pointer;
 }
 
 .button:hover {
-  color: hsl(234, 39%, 85%);
+  color: var(--blue-300);
 }
 
 .buttonActive {
-  color: hsl(220, 98%, 61%);
+  color: var(--primary);
 }
 
 @media screen and (max-width: 600px) {
@@ -46,23 +43,22 @@
   .filterPanelWrapper {
     margin: 0 auto;
     padding: 19px 20px 21px;
-    max-width: calc(100% - 40px);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
 
   .filterButtonWrapper {
     margin: 15px 0 0;
-    padding: 19px 80px 15px;
+    padding: 20px 80px 15px;
     display: flex;
-    max-width: calc(100% - 160px);
+    max-width: 100%;
     border-radius: 5px;
     justify-content: space-between;
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--blue-200);
   }
 
   .text {
-    font-size: 12px;
-    line-height: 10px;
+    font-size: var(--fs-small-mob);
+    line-height: 11px;
   }
 }

@@ -3,10 +3,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 1440px;
-  min-width: 375px;
-  background-color: hsl(235, 21%, 11%);
-  box-sizing: border-box;
   margin: 0 auto;
   text-rendering: optimizeLegibility;
-  color: hsl(234, 39%, 85%);
+  color: var(--blue-300);
 }

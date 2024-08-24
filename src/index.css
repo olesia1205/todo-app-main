@@ -1,9 +1,2 @@
 @import url('./vendor/styles/normalize.css');
-@import url('./vendor/fonts/fonts.css');
-
-html {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(235, 21%, 11%);
-}
+@import url('./vendor/styles/vars.css');

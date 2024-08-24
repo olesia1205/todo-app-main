@@ -2,11 +2,11 @@
   display: flex;
   position: relative;
   padding: 19.5px 24px;
-  max-width: 492px;
+  max-width: 540px;
   width: 100%;
   align-items: center;
-  border-bottom: 1px solid hsl(237, 14%, 26%);
-  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid var(--blue-600);
+  background-color: var(--blue-200);
 }
 
 .label {
@@ -17,25 +17,26 @@
 }
 
 .todoTitle {
-  font-family: JosefinSans;
-  font-size: 18px;
-  font-style: normal;
   line-height: 17px;
-  font-weight: 400;
   word-spacing: -1px;
   max-width: calc(100% - 40px);
   width: 100%;
   overflow: hidden;
   resize: none;
-  box-shadow: inset 0px -45px 0px 1000px hsl(235, 24%, 19%);
+  box-shadow: inset 0px -45px 0px 1000px var(--blue-200);
   border: none;
   outline: none;
-  color: hsl(234, 39%, 85%);
+  color: var(--blue-300);
   padding: 0;
+}
+
+.todoTitleCompleted {
+  color: var(--blue-400);
 }
 
 .labelСrossedOut {
   text-decoration: line-through;
+  color: var(--blue-400);
 }
 
 .checkbox {
@@ -52,7 +53,7 @@
   min-width: 23px;
   min-height: 23px;
   border-radius: 50%;
-  border: 1px solid hsl(237, 14%, 26%);
+  border: 1px solid var(--blue-600);
 }
 
 .checkboxLabel:hover::before {
@@ -62,14 +63,14 @@
   min-height: 23px;
   border-radius: 50%;
   border: 1px solid transparent;
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  box-shadow: inset 0 0 0 15px hsl(235, 24%, 19%);
+  background: var(--gradient);
+  box-shadow: inset 0 0 0 15px var(--blue-200);
 }
 
 .checkboxLabelCompleted::before {
   background:
     url(../../../images/icon-check.svg) no-repeat,
-    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    var(--gradient);
   background-position: center;
 }
 
@@ -86,29 +87,14 @@
   cursor: pointer;
 }
 
-.createdDate {
-  position: absolute;
-  font-family: JosefinSans;
-  font-size: 12px;
-  font-style: normal;
-  line-height: normal;
-  font-weight: 400;
-  margin: 0;
-  right: 2%;
-  top: 80%;
-  color: hsl(234, 11%, 52%);
-  opacity: 0.5;
-}
-
 @media screen and (max-width: 600px) {
   .container {
     margin: 0 auto;
     padding: 16px 20px;
-    max-width: calc(100% - 40px);
   }
 
   .todoTitle {
-    font-size: 12px;
+    font-size: var(--fs-small-mob);
     word-spacing: -1px;
     max-width: calc(100% - 24px);
   }
@@ -135,9 +121,5 @@
     right: 19px;
     width: 14px;
     height: 14px;
-  }
-
-  .createdDate {
-    font-size: 9px;
   }
 }

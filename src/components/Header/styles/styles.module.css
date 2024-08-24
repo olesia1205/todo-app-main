@@ -16,17 +16,13 @@
 
 .title {
   margin: 0;
-  font-family: JosefinSans;
   font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   letter-spacing: 15px;
-  line-height: normal;
   align-self: baseline;
 }
 
 .colorThemeButton {
-  margin: 0;
   padding: 0;
   background-image: url(../../../images/icon-sun.svg);
   background-size: 26px;
